@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h3 {
+      
+      text-align: left; 
+      font-size: 2em; 
+    }
+
+    form {
+      background-color: rgb(245, 245, 243);
+      display: flex; 
+      flex-direction: column; 
+      width: 500px; 
+      border: 3px solid #ddd; 
+      padding: 20px; 
+      border-radius: 10px; 
+    }
+
+    label { 
+      margin-bottom: 5px; 
+      font-weight: bold; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    textarea {
+      width: 100%; 
+      padding: 7px;
+      border: 1px solid #ccc; 
+      border-radius: 3px; 
+      box-sizing: border-box; 
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4CAF50; 
+      color: white; 
+      padding: 10px 10px; 
+      border: none; 
+      border-radius: 3px; 
+      cursor: pointer; 
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #3e8e41; 
+    }
+
+    .checkbox-container {
+      display: flex; 
+      align-items: center; 
+      margin-bottom: 10px; 
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px; 
+    }
+
+    select {
+      width: 70%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <pre><h3 >          Admission form</h3></pre>
+  <form action="backend.php">
+      <div>
+          <label for="name">Name:</label>
+          <input type="text" placeholder="Enter your name" name="myText" id="name">
+      </div><br>
+      <div>
+          <label for="email">Email:</label>
+          <input type="email" placeholder="Enter your email" name="myEmail" id="">
+      </div><br>
+      <div>
+          <label for="date">DOB:</label>
+          <input type="date" placeholder="Enter DOB" name="myDate" id="date"> 
+      </div><br>
+      <div>
+          <label for="number">Registration Number:</label>
+          <input type="number" placeholder="Enter your reg number" name="myNumber" id="number">
+      </div><br>
+      <div>
+          <label for="country">Country:</label>
+          <input type="text" placeholder="Enter your name" name="myText" id="country" value="India" readonly>
+      </div><br>
+      <!-- <div>
+          <label for="check">Do you want to continue?</label>
+          <input type="checkbox" name="myCheck" checked id="check">
+      </div><br> -->
+      <div>
+          Gender:Male<input type="checkbox" class="radio" value="1" name="myGender"> Female<input type="checkbox" class="radio" value="1" name="myGender">
+          Other<input type="checkbox" class="radio" value="1" name="myGender">
+      </div><br>
+      <div>
+          <!-- <label for="text">Write about you in one line.</label>
+          <br><textarea name="myText" rows="1.5" cols="1.5" id="text"></textarea>
+      </div><br> -->
+      <div>
+          <label for="branch">Branch:</label>
+          <select name="myCar" id="car">
+              <option value="nots" selected disabled>Select</option>
+              <option value="cs">CS</option>
+              <option value="it">IT</option>
+              <option value="ec">EC</option>
+              <option value="eee">EEE</option>                
+              <option value="mec">MEC</option>                
+              <option value="sfe">SFE</option>                
+          </select>
+      </div><br>
+      <div>
+          <input type="submit" value="Submit">
+          <input type="reset" value="Clear form">
+      </div>
+  </form>
+</body>
