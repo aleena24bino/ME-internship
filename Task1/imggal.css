@@ -1,0 +1,31 @@
+.main img{
+    width:100%;
+    height:auto;
+    object-fit:fill;
+    border-radius:10px;
+}
+
+.row {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.subrow{
+      flex:1;
+      flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+  
+.column{
+        flex: 1;
+        flex-direction: row;
+}
+.sub-cloumn1{
+        flex:1;
+}
